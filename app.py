@@ -167,7 +167,7 @@ def show_dept():
 
     c1, c2 = st.columns(2)
     c1.text_input("부서명 *", key="dept_name", placeholder="예: 간호부")
-    c2.text_input("팀명 (필요시)", key="team_name", placeholder="예: 00병동, 00촬영실")
+    c2.text_input("팀명", key="team_name", placeholder="예: 00병동, 00촬영실")
     st.number_input("소속 근로자 총 인원(명)", min_value=0, step=1, key="worker_count")
 
     st.divider()
@@ -247,7 +247,7 @@ def show_dept():
 def show_work():
     st.title("② 작업(Work) 입력")
     st.write("**각 공정에서 1시간 이상 수행되는 작업의 명칭을 모두 적어 주세요.**")
-    st.info("장소/신체 동작을 기준으로 하므로 너무 세세히 나누지 않아도 됩니다. "
+    st.info("장소/신체 동작을 기준으로 유형이 비슷한 작업을 구분해 주세요. 너무 세세히 나누지 않아도 됩니다.(1개 공정당 5개 이내)"
             "예를 들어, PC를 이용한 업무는 회계·인사·차팅 등을 구분하지 않고 모두 하나의 'PC 작업'입니다.")
 
     for i in range(st.session_state.num_jobs):
