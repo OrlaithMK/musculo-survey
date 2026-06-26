@@ -5,7 +5,7 @@ import pandas as pd
 import gspread
 from google.oauth2.service_account import Credentials
 
-ACCESS_CODE = "260617"   # ← 실제 배포 때 쓸 접속코드로 바꾸세요
+ACCESS_CODE = "sch202606"   # ← 실제 배포 때 쓸 접속코드로 바꾸세요
 
 st.set_page_config(page_title="근골격계유해요인 사전조사", layout="centered")
 
