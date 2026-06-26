@@ -22,6 +22,14 @@ st.markdown("""<style>
     }
 </style>""", unsafe_allow_html=True)
 
+for _k in list(st.session_state.keys()):
+    if _k.startswith(("btn_", "ed_", "entry_client_sel")):
+        continue
+    try:
+        st.session_state[_k] = st.session_state[_k]
+    except Exception:
+        pass
+
 if "stage" not in st.session_state:
     st.session_state.stage = "entry"
 
